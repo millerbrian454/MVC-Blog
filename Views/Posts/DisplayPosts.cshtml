@@ -1,0 +1,41 @@
+﻿@model IEnumerable<NewMVCapp.Models.Posts>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "The Berlin Wall";
+}
+@if(SignInManager.IsSignedIn(User))
+{
+    <div class="text-center" style="margin-bottom: 1rem; font-size: large;">
+        <a asp-controller="Posts" asp-action="CreatePost">Click Here to create a post!</a>
+    </div>  
+}
+    else
+    {
+    <div class="text-center" style="margin-bottom: 1rem; font-size: large;">
+            <p>Sign in to post something!</p>
+    </div>
+    }
+<div class="post-wall">
+    <div class="post-container">
+        <div class="posts">
+            @foreach (var posts in Model)
+            {
+                <div class="post-title">@posts.Title</div>
+                <div class="post-content">@posts.Content</div>
+                <div class="post-info">@posts.CreatedBy</div>
+                <div class="post-info">@posts.TimeStamp</div>
+
+                @if (User.Identity.Name == posts.CreatedBy)
+                {
+                    <div class="post-buttons">
+                        <a asp-controller="Post" asp-action="EditPost" asp-route-id="@posts.Id" style="margin-right: 5px">Edit</a>
+                        <a asp-controller="Post" asp-action="DeletePost" asp-route-id="@posts.Id">Delete</a>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

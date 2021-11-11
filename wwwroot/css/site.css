@@ -1,0 +1,132 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.post-wall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-container {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 85%;
+}
+
+.post {
+    display: inline-block;
+    align-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    border: black solid;
+}
+
+.post-title {
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-bottom: .5rem;
+    font-size: x-large;
+}
+
+.post-content {
+    padding: .5rem;
+    margin-bottom: .5rem;
+    background-color: white;
+    font-size: large;
+}
+
+.post-buttons {
+    display: flex;
+    justify-content: left;
+    margin-bottom: .25rem;
+    font-size: small;
+    background-color: antiquewhite;
+}
+
+.post-info {
+    font-size: small;
+    background-color: antiquewhite;
+}
+
+.content-area {
+    height: 20rem;
+    width: 100%;
+}
